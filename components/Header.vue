@@ -29,7 +29,7 @@ export default {
 }
 .header {
   max-height: 100px;
-  padding: 20px;
+  padding: 20px 30px;
   .logo_wrapper {
     border: 1px solid $acc-blue-color;
     border-radius: 50%;
