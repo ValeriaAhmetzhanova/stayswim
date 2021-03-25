@@ -37,7 +37,30 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['nuxt-i18n'],
+  i18n: {
+    locales: ['en', 'ru'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          stayswim: 'STAY SWIM',
+          questionsAndAnswers: 'Questions and answers',
+          video: 'Video',
+          certificates: 'Certificates',
+          advantages: 'Advantages',
+          instruction: 'Instruction',
+          reviews: 'Reviews',
+          whereToBuy: 'Where to buy',
+          buyNow: 'Buy now',
+        },
+        ru: {
+          welcome: 'Bienvenue',
+        },
+      },
+    },
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
