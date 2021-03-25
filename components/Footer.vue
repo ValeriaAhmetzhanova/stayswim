@@ -2,14 +2,14 @@
   <v-bottom-navigation class="footer">
     <v-spacer></v-spacer>
     <div>
-      <div class="bold footer-title">STAY SWIM</div>
+      <div class="bold footer-title">{{ $t('stayswim') }}</div>
       <div class="footer-text">
-        The best cover for swimming
+        {{ $t('footerText1') }}
         <br />
-        with deep wounds or scars
+        {{ $t('footerText2') }}
         <br />
         <br />
-        © 2021 All rights reserved
+        {{ $t('footerText3') }}
       </div>
     </div>
     <v-spacer></v-spacer>

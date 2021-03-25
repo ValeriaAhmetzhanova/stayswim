@@ -54,6 +54,9 @@ export default {
           reviews: 'Reviews',
           whereToBuy: 'Where to buy',
           buyNow: 'Buy now',
+          footerText1: 'The best cover for swimming',
+          footerText2: 'with deep wounds or scars',
+          footerText3: '© 2021 All rights reserved',
         },
         ru: {
           welcome: 'Bienvenue',
