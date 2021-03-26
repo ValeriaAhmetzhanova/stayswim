@@ -4,14 +4,16 @@
       <img class="logo_img" src="logo.svg" alt="logo" />
     </div>
     <v-spacer></v-spacer>
-    <div class="nav-item">{{ $t('stayswim') }}</div>
-    <div class="nav-item">{{ $t('questionsAndAnswers') }}</div>
-    <div class="nav-item">{{ $t('certificates') }}</div>
-    <div class="nav-item">{{ $t('advantages') }}</div>
-    <div class="nav-item">{{ $t('instruction') }}</div>
-    <div class="nav-item">{{ $t('reviews') }}</div>
-    <div class="nav-item">{{ $t('whereToBuy') }}</div>
-    <div class="nav-item">{{ $t('buyNow') }}</div>
+    <nuxt-link to="/" class="nav-item">{{ $t('stayswim') }}</nuxt-link>
+    <nuxt-link to="/404" class="nav-item">{{
+      $t('questionsAndAnswers')
+    }}</nuxt-link>
+    <nuxt-link to="/404" class="nav-item">{{ $t('certificates') }}</nuxt-link>
+    <nuxt-link to="/404" class="nav-item">{{ $t('advantages') }}</nuxt-link>
+    <nuxt-link to="/404" class="nav-item">{{ $t('instruction') }}</nuxt-link>
+    <nuxt-link to="/404" class="nav-item">{{ $t('reviews') }}</nuxt-link>
+    <nuxt-link to="/404" class="nav-item">{{ $t('whereToBuy') }}</nuxt-link>
+    <nuxt-link to="/404" class="nav-item">{{ $t('buyNow') }}</nuxt-link>
     <v-spacer></v-spacer>
     <div class="acc-blue">8 (800) 500-51-86</div>
   </v-app-bar>
@@ -41,9 +43,17 @@ export default {
   }
   .nav-item {
     margin-right: 2rem;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: $acc-blue-color;
+    }
     &:last-child {
       margin-right: 0;
     }
+  }
+  .nuxt-link-active {
+    color: $acc-blue-color;
   }
 }
 </style>
