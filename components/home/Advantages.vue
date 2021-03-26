@@ -36,9 +36,17 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    padding: 20px;
+    padding: 50px 20px;
+    @media (max-width: $sm) {
+      background-image: none;
+      flex-direction: column;
+    }
     .advantages-left {
       width: 25%;
+      @media (max-width: $sm) {
+        width: 90%;
+        margin: 0 auto;
+      }
       .advantage-item {
         &:before {
           position: absolute;
@@ -75,6 +83,11 @@ export default {
       width: 25%;
       margin-left: auto;
       text-align: right;
+      @media (max-width: $sm) {
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+      }
       .advantage-item {
         &:before {
           position: absolute;
@@ -84,6 +97,10 @@ export default {
           font-weight: 600;
           color: #161616;
           z-index: -1;
+          @media (max-width: $sm) {
+            left: -25px;
+            right: auto;
+          }
         }
         &:nth-child(1) {
           &:before {
