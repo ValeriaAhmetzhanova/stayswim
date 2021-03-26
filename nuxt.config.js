@@ -76,6 +76,14 @@ export default {
             'The film repels water, so you can take a bath and even swim or surfing in the ocean with comfortable',
           advantage7:
             'The elasticity and extensibility of the film make it easy and tight to fix it on the skin, including the folds',
+          typesOfFilms: 'Types of fast films:',
+          typesTitle1: 'STAY SWIM in rolls',
+          typesText1: 'Package for shops',
+          typesText2:
+            'Content: roll of film, memo for the client, instructions',
+          typesText3: ' Production: Germany',
+          typesTitle2: 'STAY SWIM in an individual package',
+          typesText4: 'Special film dressing for skin care after accident',
         },
         ru: {
           welcome: 'Bienvenue',
