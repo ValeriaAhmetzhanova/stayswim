@@ -1,9 +1,12 @@
 <template>
-  <div>Index</div>
+  <div>
+    <Banner />
+  </div>
 </template>
 
 <script>
+import Banner from '../components/home/Banner'
 export default {
-  components: {},
+  components: { Banner },
 }
 </script>

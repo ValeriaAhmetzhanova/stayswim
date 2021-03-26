@@ -54,9 +54,15 @@ export default {
           reviews: 'Reviews',
           whereToBuy: 'Where to buy',
           buyNow: 'Buy now',
+          buy: 'Buy',
           footerText1: 'The best cover for swimming',
           footerText2: 'with deep wounds or scars',
           footerText3: '© 2021 All rights reserved',
+          bannerSubtitle: 'Made it, stuck it and forgot!',
+          bannerText1:
+            'The best cover for swimming with deep wounds or scars. Made in Germany!',
+          bannerText2:
+            'REVOLUTION in a skin care and protection after getting a wounds on a reef in the ocean or in a bike accident - STAY SWIM!',
         },
         ru: {
           welcome: 'Bienvenue',
