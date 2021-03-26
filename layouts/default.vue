@@ -11,3 +11,9 @@
 </template>
 
 <script></script>
+
+<style>
+body {
+  font-family: 'Roboto Light', sans-serif;
+}
+</style>

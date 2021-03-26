@@ -63,6 +63,19 @@ export default {
             'The best cover for swimming with deep wounds or scars. Made in Germany!',
           bannerText2:
             'REVOLUTION in a skin care and protection after getting a wounds on a reef in the ocean or in a bike accident - STAY SWIM!',
+          advantage1: '2 times faster',
+          advantage2:
+            'STAY SWIM allows air and steam to pass through it to provide natural skin breathing and feeling of comfort',
+          advantage3:
+            'The film is completely transparent, which allows you to monitor the healing process',
+          advantage4:
+            'Using STAY SWIM will help your wounds stay protect from outside infections even in salt water',
+          advantage5:
+            'The wounds completely heals on the 3th-4th day! The film sticks only 1 time, which allows you to save the sacrum and provide accelerated "wet" healing',
+          advantage6:
+            'The film repels water, so you can take a bath and even swim or surfing in the ocean with comfortable',
+          advantage7:
+            'The elasticity and extensibility of the film make it easy and tight to fix it on the skin, including the folds',
         },
         ru: {
           welcome: 'Bienvenue',
