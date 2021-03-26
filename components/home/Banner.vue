@@ -30,21 +30,37 @@ export default {
   padding: 40px 0;
   .banner-text {
     width: 50%;
+    @media (max-width: $sm) {
+      width: 100%;
+      text-align: center;
+    }
     .banner-text_wrapper {
       margin: 80px auto;
       width: 80%;
+      @media (max-width: $md) {
+        margin: 30px auto;
+      }
       .banner-text_title {
         font-size: 4rem;
         color: $acc-blue-color;
+        @media (max-width: $md) {
+          font-size: 3rem;
+        }
       }
       h4 {
         font-size: 2rem;
         color: $acc-blue-color;
         margin-bottom: 10px;
+        @media (max-width: $md) {
+          font-size: 1.5rem;
+        }
       }
       .banner-text_info {
         font-size: 0.9rem;
         width: 60%;
+        @media (max-width: $sm) {
+          width: 100%;
+        }
       }
     }
   }
@@ -53,6 +69,9 @@ export default {
     text-align: center;
     img {
       width: 80%;
+    }
+    @media (max-width: $sm) {
+      display: none;
     }
   }
 }
