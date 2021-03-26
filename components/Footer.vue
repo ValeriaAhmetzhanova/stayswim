@@ -41,13 +41,23 @@ export default {
   padding: 10px 50px;
   .footer-title {
     font-size: 36px;
+    @media (max-width: $sm) {
+      font-size: 16px;
+      margin-right: 10px;
+    }
   }
   .footer-item {
     font-size: 30px;
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
   }
   .footer-text {
     color: $darkgrey-color;
     font-size: 14px;
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 }
 </style>

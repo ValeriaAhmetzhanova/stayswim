@@ -10,6 +10,7 @@
           <br />
           {{ $t('bannerText2') }}
         </div>
+        <nuxt-link to="/404" class="buy-btn">{{ $t('buy') }}</nuxt-link>
       </div>
     </div>
     <div class="banner-img">
@@ -25,6 +26,12 @@ export default {
 </script>
 
 <style lang="scss">
+.buy-btn {
+  padding: 0.5rem 2.5rem;
+  border: 1px solid $acc-blue-color;
+  color: $acc-blue-color !important;
+  text-decoration: none;
+}
 .banner {
   display: flex;
   padding: 40px 0;
@@ -58,6 +65,7 @@ export default {
       .banner-text_info {
         font-size: 0.9rem;
         width: 60%;
+        margin-bottom: 20px;
         @media (max-width: $sm) {
           width: 100%;
         }
