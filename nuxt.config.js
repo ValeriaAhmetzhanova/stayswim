@@ -84,6 +84,10 @@ export default {
           typesText3: ' Production: Germany',
           typesTitle2: 'STAY SWIM in an individual package',
           typesText4: 'Special film dressing for skin care after accident',
+          stillQuestions: 'Still have any questions?',
+          name: 'Name*',
+          phone: 'Phone number*',
+          question: 'Question*',
         },
         ru: {
           welcome: 'Bienvenue',

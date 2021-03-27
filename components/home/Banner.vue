@@ -27,9 +27,11 @@ export default {
 
 <style lang="scss">
 .buy-btn {
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2.5rem !important;
   border: 1px solid $acc-blue-color;
   color: $acc-blue-color !important;
+  background-color: transparent !important;
+  border-radius: 0;
   text-decoration: none;
 }
 .banner {
