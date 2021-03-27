@@ -23,7 +23,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '@/plugins/vue-awesome-swiper', mode: 'ssr' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -88,6 +88,8 @@ export default {
           name: 'Name*',
           phone: 'Phone number*',
           question: 'Question*',
+          instructionFix: 'Instruction of fixing',
+          instructionRemove: 'Instruction of removing',
         },
         ru: {
           welcome: 'Bienvenue',

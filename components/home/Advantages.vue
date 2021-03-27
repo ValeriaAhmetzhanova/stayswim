@@ -29,6 +29,9 @@ export default {
   color: $acc-blue-color;
   font-size: 3rem;
   font-weight: 600;
+  @media (max-width: $sm) {
+    font-size: 2rem;
+  }
 }
 .advantages {
   .advantages-body {
