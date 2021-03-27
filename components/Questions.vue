@@ -67,6 +67,9 @@ export default {
       width: 50%;
       align-items: center;
       display: flex;
+      @media (max-width: $sm) {
+        width: 100%;
+      }
       .v-form {
         width: 80%;
         margin: 0 auto;
@@ -75,6 +78,9 @@ export default {
     }
     img {
       width: 50%;
+      @media (max-width: $sm) {
+        display: none;
+      }
     }
   }
 }
