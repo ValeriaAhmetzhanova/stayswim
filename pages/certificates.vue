@@ -1,17 +1,20 @@
 <template>
-  <div class="certificates page-content">
-    <div class="section-title">{{ $t('certificates') }}</div>
-    <swiper class="swiper" :options="swiperOption">
-      <swiper-slide v-for="item in certificateImg" :key="item">
-        <img
-          class="instruction-img"
-          :src="`/certificates/certificate${item}.png`"
-          alt=""
-        />
-      </swiper-slide>
-      <div slot="button-next" class="swiper-button-next nav-btn"></div>
-      <div slot="button-prev" class="swiper-button-prev nav-btn"></div>
-    </swiper>
+  <div>
+    <div class="certificates page-content">
+      <div class="section-title">{{ $t('certificates') }}</div>
+      <swiper class="swiper" :options="swiperOption">
+        <swiper-slide v-for="item in certificateImg" :key="item">
+          <img
+            class="instruction-img"
+            :src="`/certificates/certificate${item}.png`"
+            alt=""
+          />
+        </swiper-slide>
+        <div slot="button-next" class="swiper-button-next nav-btn"></div>
+        <div slot="button-prev" class="swiper-button-prev nav-btn"></div>
+      </swiper>
+    </div>
+    <Questions />
   </div>
 </template>
 

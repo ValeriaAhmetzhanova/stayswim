@@ -25,7 +25,7 @@
           <v-btn class="buy-btn" @click="handleSubmit"> Send </v-btn>
         </v-form>
       </div>
-      <img src="questions.png" alt="img" />
+      <img src="/questions.png" alt="img" />
     </div>
   </div>
 </template>
