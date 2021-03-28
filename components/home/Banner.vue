@@ -33,6 +33,10 @@ export default {
   background-color: transparent !important;
   border-radius: 0;
   text-decoration: none;
+  &:hover {
+    background-color: $acc-blue-color !important;
+    color: #0f0f0f !important;
+  }
 }
 .banner {
   display: flex;
