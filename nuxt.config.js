@@ -113,6 +113,10 @@ export default {
             '! It is not recommended to clean the STAY SWIM film under water!\n' +
             'This will be more painful, and glue particles may remain on your skin.',
           ourContacts: 'Our contacts',
+          yourOrder: 'Your order',
+          quantity: 'Quantity',
+          price: 'Price',
+          placeOrder: 'Place order',
         },
         ru: {
           welcome: 'Bienvenue',
