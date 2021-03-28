@@ -6,13 +6,13 @@
       </div>
       <v-spacer></v-spacer>
       <nuxt-link to="/" class="nav-item">{{ $t('stayswim') }}</nuxt-link>
-      <nuxt-link to="/404" class="nav-item">{{
-        $t('questionsAndAnswers')
-      }}</nuxt-link>
       <nuxt-link to="/404" class="nav-item">{{ $t('certificates') }}</nuxt-link>
-      <nuxt-link to="/404" class="nav-item">{{ $t('advantages') }}</nuxt-link>
-      <nuxt-link to="/404" class="nav-item">{{ $t('instruction') }}</nuxt-link>
-      <nuxt-link to="/404" class="nav-item">{{ $t('reviews') }}</nuxt-link>
+      <div class="nav-item" @click="$vuetify.goTo('#advantages')">
+        {{ $t('advantages') }}
+      </div>
+      <div class="nav-item" @click="$vuetify.goTo('#instructions')">
+        {{ $t('instruction') }}
+      </div>
       <nuxt-link to="/404" class="nav-item">{{ $t('whereToBuy') }}</nuxt-link>
       <nuxt-link to="/404" class="nav-item">{{ $t('buyNow') }}</nuxt-link>
       <v-spacer></v-spacer>

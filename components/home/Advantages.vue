@@ -1,5 +1,5 @@
 <template>
-  <div class="advantages">
+  <div id="advantages" class="advantages">
     <div class="section-title">{{ $t('advantages') }}</div>
     <div class="advantages-body">
       <div class="advantages-left">

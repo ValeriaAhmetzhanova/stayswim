@@ -1,13 +1,9 @@
 <template>
-  <div class="instructions">
+  <div id="instructions" class="instructions">
     <div class="instruction-section">
       <div class="section-title">{{ $t('instructionFix') }}</div>
       <swiper-fix />
     </div>
-    <!--    <div class="instruction-section">-->
-    <!--      <div class="section-title">{{ $t('instructionRemove') }}</div>-->
-    <!--      <swiper-remove />-->
-    <!--    </div>-->
   </div>
 </template>
 
