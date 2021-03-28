@@ -3,8 +3,6 @@
     <div class="gmap_canvas">
       <iframe
         id="gmap_canvas"
-        width="460"
-        height="340"
         src="https://maps.google.com/maps?q=Jl.%20Raya%20Uluwatu,%20Ungasan,%20Kec.%20Kuta%20Sel.,%20Kabupaten%20Badung,%20Bali%2080361&t=&z=13&ie=UTF8&iwloc=&output=embed"
         frameborder="0"
         scrolling="no"
@@ -18,7 +16,6 @@
           height: 340px;
           width: 460px;
         }</style
-      ><a href="https://www.embedgooglemap.net">google map on my website</a
       ><style>
         .gmap_canvas {
           overflow: hidden;
@@ -37,4 +34,13 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.gmap_canvas {
+  margin: 0 auto;
+  width: auto;
+}
+iframe {
+  width: 100%;
+  height: 300px;
+}
+</style>

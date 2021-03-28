@@ -30,11 +30,13 @@ export default {
 .location {
   display: flex;
   margin: 3rem 0;
+  padding: 0 5%;
   @media (max-width: $sm) {
     flex-direction: column;
+    padding: 0;
   }
   .location-item {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     @media (max-width: $sm) {
       width: 70%;
@@ -45,7 +47,7 @@ export default {
     text-align: right;
     color: $grey-color;
     font-size: 1.4rem;
-    padding-left: 20%;
+    padding-left: 15%;
     @media (max-width: $sm) {
       text-align: center;
       padding-left: 0;
