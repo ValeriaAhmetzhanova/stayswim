@@ -15,7 +15,9 @@
       <nuxt-link to="/#instructions" class="nav-item">
         {{ $t('instruction') }}
       </nuxt-link>
-      <nuxt-link to="/404" class="nav-item">{{ $t('whereToBuy') }}</nuxt-link>
+      <nuxt-link to="/location" class="nav-item">{{
+        $t('whereToBuy')
+      }}</nuxt-link>
       <nuxt-link to="/404" class="nav-item">{{ $t('buyNow') }}</nuxt-link>
       <v-spacer></v-spacer>
       <div class="acc-blue">8 (800) 500-51-86</div>
@@ -48,7 +50,7 @@
           <hr />
         </li>
         <li @click="toggleMenu">
-          <nuxt-link to="/404" class="nav-item">{{
+          <nuxt-link to="/location" class="nav-item">{{
             $t('whereToBuy')
           }}</nuxt-link>
           <hr />
