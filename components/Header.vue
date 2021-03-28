@@ -6,13 +6,15 @@
       </div>
       <v-spacer></v-spacer>
       <nuxt-link to="/" class="nav-item">{{ $t('stayswim') }}</nuxt-link>
-      <nuxt-link to="/404" class="nav-item">{{ $t('certificates') }}</nuxt-link>
-      <div class="nav-item" @click="$vuetify.goTo('#advantages')">
+      <nuxt-link to="/certificates" class="nav-item">{{
+        $t('certificates')
+      }}</nuxt-link>
+      <nuxt-link to="/#advantages" class="nav-item">
         {{ $t('advantages') }}
-      </div>
-      <div class="nav-item" @click="$vuetify.goTo('#instructions')">
+      </nuxt-link>
+      <nuxt-link to="/#instructions" class="nav-item">
         {{ $t('instruction') }}
-      </div>
+      </nuxt-link>
       <nuxt-link to="/404" class="nav-item">{{ $t('whereToBuy') }}</nuxt-link>
       <nuxt-link to="/404" class="nav-item">{{ $t('buyNow') }}</nuxt-link>
       <v-spacer></v-spacer>
@@ -28,31 +30,21 @@
           <hr />
         </li>
         <li>
-          <nuxt-link to="/404" class="nav-item">{{
-            $t('questionsAndAnswers')
-          }}</nuxt-link>
-          <hr />
-        </li>
-        <li>
-          <nuxt-link to="/404" class="nav-item">{{
+          <nuxt-link to="/certificates" class="nav-item">{{
             $t('certificates')
           }}</nuxt-link>
           <hr />
         </li>
         <li>
-          <nuxt-link to="/404" class="nav-item">{{
-            $t('advantages')
-          }}</nuxt-link>
+          <div class="nav-item" @click="$vuetify.goTo('#advantages')">
+            {{ $t('advantages') }}
+          </div>
           <hr />
         </li>
         <li>
-          <nuxt-link to="/404" class="nav-item">{{
-            $t('instruction')
-          }}</nuxt-link>
-          <hr />
-        </li>
-        <li>
-          <nuxt-link to="/404" class="nav-item">{{ $t('reviews') }}</nuxt-link>
+          <div class="nav-item" @click="$vuetify.goTo('#instructions')">
+            {{ $t('instruction') }}
+          </div>
           <hr />
         </li>
         <li>
@@ -154,7 +146,7 @@ export default {
       margin-right: 0;
     }
   }
-  .nuxt-link-active {
+  .nuxt-link-exact-active {
     color: $acc-blue-color;
   }
 }

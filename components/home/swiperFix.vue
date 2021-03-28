@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="instruction-swiper">
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide v-for="item in fixImg" :key="item">
         <img
@@ -39,6 +39,15 @@ export default {
   padding: 20px;
   color: $acc-blue-color !important;
 }
+.instruction-swiper {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 30%;
+    @media (max-width: $sm) {
+      top: 25%;
+    }
+  }
+}
 .swiper {
   .swiper-wrapper {
     width: 50%;
@@ -59,13 +68,6 @@ export default {
     width: 50%;
     @media (max-width: $sm) {
       width: 90%;
-    }
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: 30%;
-    @media (max-width: $sm) {
-      top: 25%;
     }
   }
 }
