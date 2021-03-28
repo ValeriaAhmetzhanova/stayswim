@@ -4,7 +4,7 @@
       <div class="section-title">{{ $t('yourOrder') }}</div>
       <div class="order-row">
         <div class="image">
-          {{ $t('typesTitle2') }}
+          <div>{{ $t('typesTitle2') }}</div>
           <img src="/product2.png" alt="rolls" />
         </div>
         <div class="table">
@@ -120,33 +120,59 @@ export default {
 </script>
 
 <style lang="scss">
-.total {
-  text-align: right;
-  width: 50%;
-  margin: 3rem auto;
-  color: $acc-blue-color;
-  font-size: 2rem;
-  font-weight: 600;
-}
 .order-row {
   display: flex;
   margin: 2rem 0;
+  @media (max-width: $md) {
+    flex-direction: column;
+  }
   .image {
     width: 30%;
     margin-top: 4rem;
+    text-align: center;
+    @media (max-width: $md) {
+      width: 100%;
+    }
   }
   .table {
     width: 70%;
-    margin-bottom: 3rem;
+    margin: 3rem;
+    @media (max-width: $md) {
+      width: 100%;
+    }
+    .total {
+      text-align: right;
+      width: 50%;
+      margin: 3rem auto;
+      color: $acc-blue-color;
+      font-size: 2rem;
+      font-weight: 600;
+      @media (max-width: $md) {
+        display: none;
+      }
+    }
     .buy {
       text-align: right;
       width: 50%;
       margin: 0 auto;
+      @media (max-width: $md) {
+        width: 100%;
+        text-align: center;
+      }
+      .buy-btn {
+        @media (max-width: $md) {
+          margin-right: 10%;
+        }
+      }
     }
     table {
       font-size: 1.2rem;
       border-collapse: separate;
       border-spacing: 0 1em;
+      margin: 0 auto;
+      @media (max-width: $md) {
+        display: none;
+      }
       th {
         font-size: 2rem;
       }
