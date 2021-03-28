@@ -1,6 +1,7 @@
 <template>
   <v-app dark style="background-color: rgb(14 14 14)">
     <Header />
+    <Social />
     <v-main>
       <v-container>
         <nuxt />
