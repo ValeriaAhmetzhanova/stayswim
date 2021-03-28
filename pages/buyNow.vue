@@ -148,7 +148,7 @@ export default {
   }
   .table {
     width: 70%;
-    margin: 3rem;
+    margin: 3rem 0;
     @media (max-width: $md) {
       width: 100%;
     }
