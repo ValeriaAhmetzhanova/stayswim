@@ -30,15 +30,26 @@ export default {
 .location {
   display: flex;
   margin: 3rem 0;
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
   .location-item {
     width: 50%;
     margin: 0 auto;
+    @media (max-width: $sm) {
+      width: 70%;
+      margin-bottom: 2rem;
+    }
   }
   .text {
     text-align: right;
     color: $grey-color;
     font-size: 1.4rem;
     padding-left: 20%;
+    @media (max-width: $sm) {
+      text-align: center;
+      padding-left: 0;
+    }
     .number {
       font-size: 2rem;
     }
