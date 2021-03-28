@@ -20,7 +20,7 @@ export default {
   name: 'SwiperFix',
   data() {
     return {
-      fixImg: ['1', '2', '3', '4', '5', '6'],
+      fixImg: ['7', '8'],
       swiperOption: {
         navigation: {
           nextEl: '.swiper-button-next',
@@ -33,42 +33,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-.nav-btn {
-  padding: 20px;
-  color: $acc-blue-color !important;
-}
-.instruction-swiper {
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: 30%;
-    @media (max-width: $sm) {
-      top: 25%;
-    }
-  }
-}
-.swiper {
-  .swiper-wrapper {
-    width: 50%;
-    margin: 0 auto;
-    @media (max-width: $sm) {
-      width: 90%;
-    }
-  }
-  .instruction-img {
-    width: 50%;
-    @media (max-width: $sm) {
-      width: 90%;
-    }
-  }
-  .instruction-text {
-    font-size: 1.3rem;
-    margin: 1rem 0;
-    width: 50%;
-    @media (max-width: $sm) {
-      width: 90%;
-    }
-  }
-}
-</style>

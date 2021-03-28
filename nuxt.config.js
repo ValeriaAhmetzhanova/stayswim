@@ -103,7 +103,12 @@ export default {
           instructionText6:
             'In the case of a large wounds or scar, it is necessary to fix the film with\n' +
             'an overlap about 1.5-2 cm.',
-          instructionText7: 'Remove the paper layer.',
+          instructionText7:
+            'Pry the film and grab it by the edge.\n' +
+            'Pull the film strongly to the side, along the skin.\n' +
+            '\n' +
+            'Keeping the film as stretched as possible, slowly peel off the film. The\n' +
+            'film will go off painlessly and will not tear!',
           instructionText8:
             '! It is not recommended to clean the STAY SWIM film under water!\n' +
             'This will be more painful, and glue particles may remain on your skin.',

@@ -4,14 +4,19 @@
       <div class="section-title">{{ $t('instructionFix') }}</div>
       <swiper-fix />
     </div>
+    <div class="instruction-section">
+      <div class="section-title">{{ $t('instructionRemove') }}</div>
+      <swiper-remove />
+    </div>
   </div>
 </template>
 
 <script>
 import SwiperFix from './swiperFix'
+import SwiperRemove from './swiperRemove'
 export default {
   name: 'Instructions',
-  components: { SwiperFix },
+  components: { SwiperFix, SwiperRemove },
   data() {
     return {
       removeImg: ['5', '6', '7', '8'],
