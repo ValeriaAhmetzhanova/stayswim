@@ -2,14 +2,14 @@
   <div class="types">
     <div class="section-title">{{ $t('typesOfFilms') }}</div>
     <div class="types-body">
-      <div class="types-col">
-        <div class="img-wrap"><img src="product1.png" alt="product" /></div>
-        <div class="title">{{ $t('typesTitle1') }}</div>
-        <div>{{ $t('typesText1') }}</div>
-        <div>{{ $t('typesText2') }}</div>
-        <div>{{ $t('typesText3') }}</div>
-        <div><nuxt-link to="/buyNow" class="buy-btn">Buy</nuxt-link></div>
-      </div>
+      <!--      <div class="types-col">-->
+      <!--        <div class="img-wrap"><img src="product1.png" alt="product" /></div>-->
+      <!--        <div class="title">{{ $t('typesTitle1') }}</div>-->
+      <!--        <div>{{ $t('typesText1') }}</div>-->
+      <!--        <div>{{ $t('typesText2') }}</div>-->
+      <!--        <div>{{ $t('typesText3') }}</div>-->
+      <!--        <div><nuxt-link to="/buyNow" class="buy-btn">Buy</nuxt-link></div>-->
+      <!--      </div>-->
       <div class="types-col">
         <div class="img-wrap"><img src="product2.png" alt="product" /></div>
         <div class="title">{{ $t('typesTitle2') }}</div>
@@ -37,7 +37,7 @@ export default {
       flex-direction: column;
     }
     .types-col {
-      width: 50%;
+      width: 100%;
       text-align: center;
       @media (max-width: $sm) {
         width: 100%;
