@@ -60,6 +60,13 @@
               <td>$ {{ type5Price }}</td>
             </tr>
           </table>
+          <v-text-field
+            v-model="number"
+            :label="$t('phone')"
+            required
+            :rules="phoneRules"
+            class="phone"
+          ></v-text-field>
           <div class="total">$ {{ total }}</div>
           <div class="buy">
             <span class="buy-btn">{{ $t('placeOrder') }}</span>
@@ -87,6 +94,11 @@ export default {
       type3Price: 6,
       type4Price: 4,
       type5Price: 2,
+      number: '',
+      phoneRules: [
+        (v) => !!v || 'Phone number  is required',
+        (v) => /^\d+$/.test(v) || 'Phone number must be valid',
+      ],
     }
   },
   computed: {
@@ -140,6 +152,16 @@ export default {
     @media (max-width: $md) {
       width: 100%;
     }
+    .phone {
+      width: 30%;
+      margin: 0 5rem 0 auto;
+      @media (max-width: $md) {
+        margin: 2rem auto;
+      }
+      @media (max-width: $sm) {
+        width: 60%;
+      }
+    }
     .total {
       text-align: right;
       width: 50%;
@@ -158,11 +180,6 @@ export default {
       @media (max-width: $md) {
         width: 100%;
         text-align: center;
-      }
-      .buy-btn {
-        @media (max-width: $md) {
-          margin-right: 10%;
-        }
       }
     }
     table {

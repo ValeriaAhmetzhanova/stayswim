@@ -17,7 +17,7 @@ export default {
   top: 50%;
   z-index: 10;
   @media (max-width: $sm) {
-    right: 5%;
+    right: 10%;
     top: 2%;
     text-align: center;
   }
