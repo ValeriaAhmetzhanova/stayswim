@@ -90,6 +90,23 @@ export default {
           question: 'Question*',
           instructionFix: 'Instruction of fixing',
           instructionRemove: 'Instruction of removing',
+          instructionText1: 'Cut the required film length.',
+          instructionText2:
+            'When bending the paper layer, begin to separate it from the film.',
+          instructionText3: 'Remove the paper layer.',
+          instructionText4:
+            'Pull the film and press it to the skin over the entire surface of the wound,\n' +
+            'so that the film extends 1-1.5 cm beyond the outer edge of the wound.',
+          instructionText5:
+            'With smoothing movements, press the film more tightly to the skin,\n' +
+            'especially at the edges and remove the auxiliary film.',
+          instructionText6:
+            'In the case of a large wounds or scar, it is necessary to fix the film with\n' +
+            'an overlap about 1.5-2 cm.',
+          instructionText7: 'Remove the paper layer.',
+          instructionText8:
+            '! It is not recommended to clean the STAY SWIM film under water!\n' +
+            'This will be more painful, and glue particles may remain on your skin.',
         },
         ru: {
           welcome: 'Bienvenue',
