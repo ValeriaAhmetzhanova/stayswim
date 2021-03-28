@@ -10,7 +10,7 @@
           <br />
           {{ $t('bannerText2') }}
         </div>
-        <nuxt-link to="/404" class="buy-btn">{{ $t('buy') }}</nuxt-link>
+        <nuxt-link to="/buyNow" class="buy-btn">{{ $t('buy') }}</nuxt-link>
       </div>
     </div>
     <div class="banner-img">
