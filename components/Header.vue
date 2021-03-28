@@ -25,35 +25,35 @@
     </v-app-bar>
     <div v-if="menuIsActive" class="overlay" @click="toggleMenu">
       <ul class="menu_popup" @click.stop>
-        <li>
+        <li @click="toggleMenu">
           <nuxt-link to="/" class="nav-item">{{ $t('stayswim') }}</nuxt-link>
           <hr />
         </li>
-        <li>
+        <li @click="toggleMenu">
           <nuxt-link to="/certificates" class="nav-item">{{
             $t('certificates')
           }}</nuxt-link>
           <hr />
         </li>
-        <li>
-          <div class="nav-item" @click="$vuetify.goTo('#advantages')">
+        <li @click="toggleMenu">
+          <nuxt-link to="/#advantages" class="nav-item">
             {{ $t('advantages') }}
-          </div>
+          </nuxt-link>
           <hr />
         </li>
-        <li>
-          <div class="nav-item" @click="$vuetify.goTo('#instructions')">
+        <li @click="toggleMenu">
+          <nuxt-link to="/#instructions" class="nav-item">
             {{ $t('instruction') }}
-          </div>
+          </nuxt-link>
           <hr />
         </li>
-        <li>
+        <li @click="toggleMenu">
           <nuxt-link to="/404" class="nav-item">{{
             $t('whereToBuy')
           }}</nuxt-link>
           <hr />
         </li>
-        <li>
+        <li @click="toggleMenu">
           <nuxt-link to="/404" class="nav-item">{{ $t('buyNow') }}</nuxt-link>
           <hr />
         </li>
@@ -115,7 +115,7 @@ export default {
       font-size: 1.3rem;
       color: $darkgrey-color;
     }
-    .nuxt-link-active {
+    .nuxt-link-exact-active {
       color: $acc-blue-color;
     }
   }
