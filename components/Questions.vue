@@ -22,7 +22,7 @@
             required
             :rules="questionRules"
           ></v-text-field>
-          <v-btn class="buy-btn" @click="handleSubmit"> Send </v-btn>
+          <v-btn class="buy-btn" @click="handleSubmit">{{ $t('send') }}</v-btn>
         </v-form>
       </div>
       <img src="/questions.png" alt="img" />
