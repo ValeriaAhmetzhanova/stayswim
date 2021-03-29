@@ -20,10 +20,13 @@
       }}</nuxt-link>
       <nuxt-link to="/buyNow" class="nav-item">{{ $t('buyNow') }}</nuxt-link>
       <v-spacer></v-spacer>
+      <LanguageSwitch />
       <div class="acc-blue">8 (800) 500-51-86</div>
     </v-app-bar>
     <v-app-bar class="header-mobile" color="transparent" flat>
       <v-app-bar-nav-icon @click="toggleMenu"></v-app-bar-nav-icon>
+      <v-spacer />
+      <LanguageSwitch />
     </v-app-bar>
     <div v-if="menuIsActive" class="overlay" @click="toggleMenu">
       <ul class="menu_popup" @click.stop>
@@ -98,9 +101,6 @@ export default {
 .header-mobile {
   display: none;
   text-align: center;
-  button {
-    margin: 0 auto !important;
-  }
   @media (max-width: $md) {
     display: block;
   }
