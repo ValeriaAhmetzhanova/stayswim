@@ -154,7 +154,7 @@ export default {
     }
     .phone {
       width: 30%;
-      margin: 0 5rem 0 auto;
+      margin: 2rem 0 0 10rem;
       @media (max-width: $md) {
         margin: 2rem auto;
       }
