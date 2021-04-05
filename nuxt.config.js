@@ -17,6 +17,19 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        src: 'https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js',
+        type: 'text/javascript',
+      },
+      {
+        innerHTML:
+          '(function() {\n' +
+          '            emailjs.init("user_ubc1MVB6m2AAMXq8JHjCF");\n' +
+          '        })();',
+      },
+    ],
+    __dangerouslyDisableSanitizers: ['script'],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -118,6 +131,11 @@ export default {
           price: 'Price',
           placeOrder: 'Place order',
           send: 'Send',
+          sending: 'Please wait, your question is sending...',
+          sent:
+            'Your question was successfully sent! We will contact you soon.',
+          errorNotSent:
+            'Error. Please, try again later or contact us via phone call.',
         },
         ru: {
           stayswim: 'STAY SWIM',
@@ -188,6 +206,11 @@ export default {
           price: 'Цена',
           placeOrder: 'Заказать',
           send: 'Отправить',
+          sending: 'Пожалуйста, подождите. Ваш вопрос отправляется...',
+          sent:
+            'Ваш вопрос был успешно отправлен! Мы свяжемся с Вами в ближайшее время.',
+          errorNotSent:
+            'Произошла ошибка. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.',
         },
       },
     },

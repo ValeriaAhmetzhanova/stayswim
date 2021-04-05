@@ -3,26 +3,46 @@
     <div class="section-title">{{ $t('stillQuestions') }}</div>
     <div class="questions-body">
       <div class="form">
-        <v-form ref="form" v-model="valid" lazy-validation>
+        <v-form id="contact-form" ref="form" v-model="valid" lazy-validation>
           <v-text-field
+            id="name"
             v-model="name"
+            type="text"
+            name="name"
             :label="$t('name')"
             :rules="nameRules"
             required
           ></v-text-field>
           <v-text-field
+            id="number"
             v-model="number"
+            type="text"
+            name="number"
             :label="$t('phone')"
             required
             :rules="phoneRules"
           ></v-text-field>
           <v-text-field
+            id="question"
             v-model="question"
+            type="text"
+            name="question"
             :label="$t('question')"
             required
             :rules="questionRules"
           ></v-text-field>
-          <v-btn class="buy-btn" @click="handleSubmit">{{ $t('send') }}</v-btn>
+          <span id="sending" class="sending-info display-none">{{
+            $t('sending')
+          }}</span>
+          <span id="sent" class="sending-info display-none">{{
+            $t('sent')
+          }}</span>
+          <span id="error" class="sending-info display-none">{{
+            $t('errorNotSent')
+          }}</span>
+          <v-btn id="buy-btn" class="buy-btn" @click="handleSubmit">{{
+            $t('send')
+          }}</v-btn>
         </v-form>
       </div>
       <img src="/questions.png" alt="img" />
@@ -52,13 +72,42 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log(this.$refs.form.validate())
+      document.getElementById('sent').classList.add('display-none')
+      document.getElementById('error').classList.add('display-none')
+      if (this.$refs.form.validate()) {
+        document.getElementById('sending').classList.remove('display-none')
+        // eslint-disable-next-line no-undef
+        emailjs
+          .sendForm(
+            'default_service',
+            'template_rd5ck3t',
+            document.getElementById('contact-form')
+          )
+          .then(
+            function () {
+              document.getElementById('sending').classList.add('display-none')
+              document.getElementById('sent').classList.remove('display-none')
+            },
+            function (error) {
+              document.getElementById('sending').classList.add('display-none')
+              document.getElementById('error').classList.remove('display-none')
+              console.log('FAILED...', error)
+            }
+          )
+      }
     },
   },
 }
 </script>
 
 <style lang="scss">
+.display-none {
+  display: none !important;
+}
+.sending-info {
+  display: block;
+  margin: 1rem;
+}
 .questions {
   margin: 3rem auto;
   .questions-body {
