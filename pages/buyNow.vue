@@ -129,7 +129,7 @@ export default {
       return result
     },
     message() {
-      return `The client's phone number: ${this.number}. \n Type 1 items: ${this.type1Quantity}. \n Type 2 items: ${this.type2Quantity}. \n Type 3 items: ${this.type3Quantity}. \n Type 4 items: ${this.type4Quantity}. \n Type 5 items: ${this.type5Quantity}. \n Total order price: ${this.total}.`
+      return `The client's phone number: ${this.number}. \n 15cm*30cm items: ${this.type1Quantity}. \n 15cm*20cm items: ${this.type2Quantity}. \n 10cm*30cm items: ${this.type3Quantity}. \n 10cm*15cm items: ${this.type4Quantity}. \n 5cm*7cm items: ${this.type5Quantity}. \n Total order price: ${this.total}.`
     },
   },
   methods: {
