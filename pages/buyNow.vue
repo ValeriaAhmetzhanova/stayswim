@@ -60,19 +60,35 @@
               <td>$ {{ type5Price }}</td>
             </tr>
           </table>
-          <v-text-field
-            v-model="number"
-            :label="$t('phone')"
-            required
-            :rules="phoneRules"
-            class="phone"
-          ></v-text-field>
+          <v-form ref="number" v-model="valid" lazy-validation>
+            <v-text-field
+              v-model="number"
+              :label="$t('phone')"
+              required
+              :rules="phoneRules"
+              class="phone"
+            ></v-text-field>
+          </v-form>
           <div class="total">$ {{ total }}</div>
           <div class="buy">
-            <span class="buy-btn">{{ $t('placeOrder') }}</span>
+            <span id="sendingOrder" class="sending-info display-none">{{
+              $t('sendingOrder')
+            }}</span>
+            <span id="sentOrder" class="sending-info display-none">{{
+              $t('sentOrder')
+            }}</span>
+            <span id="errorOrder" class="sending-info display-none">{{
+              $t('errorNotSent')
+            }}</span>
+            <span class="buy-btn" @click="sendOrder">{{
+              $t('placeOrder')
+            }}</span>
           </div>
         </div>
       </div>
+      <form id="order-form" class="display-none">
+        <input id="message" type="text" name="message" :value="message" />
+      </form>
     </div>
     <Questions />
   </div>
@@ -83,6 +99,7 @@ export default {
   name: 'BuyNow',
   data() {
     return {
+      valid: true,
       types: 5,
       type1Quantity: 0,
       type2Quantity: 0,
@@ -107,11 +124,12 @@ export default {
       for (let i = 1; i <= this.types; i++) {
         const quantity = `type${i}Quantity`
         const price = `type${i}Price`
-        console.log(this[quantity])
-        console.log(this[price])
         result = result + this[quantity] * this[price]
       }
       return result
+    },
+    message() {
+      return `The client's phone number: ${this.number}. \n Type 1 items: ${this.type1Quantity}. \n Type 2 items: ${this.type2Quantity}. \n Type 3 items: ${this.type3Quantity}. \n Type 4 items: ${this.type4Quantity}. \n Type 5 items: ${this.type5Quantity}. \n Total order price: ${this.total}.`
     },
   },
   methods: {
@@ -125,6 +143,39 @@ export default {
       const param = `type${type}Quantity`
       if (this[param] > 0) {
         this[param] = this[param] - 1
+      }
+    },
+    sendOrder() {
+      document.getElementById('sentOrder').classList.add('display-none')
+      document.getElementById('errorOrder').classList.add('display-none')
+      if (this.$refs.number.validate()) {
+        document.getElementById('sendingOrder').classList.remove('display-none')
+        // eslint-disable-next-line no-undef
+        emailjs
+          .sendForm(
+            'default_service',
+            'template_n2nzjss',
+            document.getElementById('order-form')
+          )
+          .then(
+            function () {
+              document
+                .getElementById('sendingOrder')
+                .classList.add('display-none')
+              document
+                .getElementById('sentOrder')
+                .classList.remove('display-none')
+            },
+            function (error) {
+              document
+                .getElementById('sendingOrder')
+                .classList.add('display-none')
+              document
+                .getElementById('errorOrder')
+                .classList.remove('display-none')
+              console.log('FAILED...', error)
+            }
+          )
       }
     },
   },

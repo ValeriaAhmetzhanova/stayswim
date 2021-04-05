@@ -136,6 +136,9 @@ export default {
             'Your question was successfully sent! We will contact you soon.',
           errorNotSent:
             'Error. Please, try again later or contact us via phone call.',
+          sendingOrder: 'Please wait, your order is sending...',
+          sentOrder:
+            'Your order was successfully sent! We will contact you soon.',
         },
         ru: {
           stayswim: 'STAY SWIM',
@@ -211,6 +214,9 @@ export default {
             'Ваш вопрос был успешно отправлен! Мы свяжемся с Вами в ближайшее время.',
           errorNotSent:
             'Произошла ошибка. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.',
+          sendingOrder: 'Пожалуйста, подождите. Ваш заказ отправляется...',
+          sentOrder:
+            'Ваш заказ был успешно отправлен! Мы свяжемся с Вами в ближайшее время.',
         },
       },
     },
