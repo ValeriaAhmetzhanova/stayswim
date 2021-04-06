@@ -60,14 +60,14 @@ export default {
       number: '',
       question: '',
       nameRules: [
-        (v) => !!v || 'Name is required',
-        (v) => (v && v.length <= 10) || 'Name must be less than 10 characters',
+        (v) => !!v || this.$i18n.t('nameRequired'),
+        (v) => (v && v.length <= 30) || this.$i18n.t('nameChars'),
       ],
       phoneRules: [
-        (v) => !!v || 'Phone number  is required',
-        (v) => /^\d+$/.test(v) || 'Phone number must be valid',
+        (v) => !!v || this.$i18n.t('phoneRequired'),
+        (v) => /^\d+$/.test(v) || this.$i18n.t('phoneValid'),
       ],
-      questionRules: [(v) => !!v || 'Question is required'],
+      questionRules: [(v) => !!v || this.$i18n.t('questionRequired')],
     }
   },
   methods: {
@@ -127,6 +127,7 @@ export default {
     }
     img {
       width: 50%;
+      height: 50%;
       @media (max-width: $sm) {
         display: none;
       }

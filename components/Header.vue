@@ -5,20 +5,24 @@
         <img class="logo_img" src="logo.svg" alt="logo" />
       </div>
       <v-spacer></v-spacer>
-      <nuxt-link to="/" class="nav-item">{{ $t('stayswim') }}</nuxt-link>
-      <nuxt-link to="/certificates" class="nav-item">{{
+      <nuxt-link :to="localePath('/')" class="nav-item">{{
+        $t('stayswim')
+      }}</nuxt-link>
+      <nuxt-link :to="localePath('/certificates')" class="nav-item">{{
         $t('certificates')
       }}</nuxt-link>
-      <nuxt-link to="/#advantages" class="nav-item">
+      <nuxt-link :to="localePath('/#advantages')" class="nav-item">
         {{ $t('advantages') }}
       </nuxt-link>
-      <nuxt-link to="/#instructions" class="nav-item">
+      <nuxt-link :to="localePath('/#instructions')" class="nav-item">
         {{ $t('instruction') }}
       </nuxt-link>
-      <nuxt-link to="/location" class="nav-item">{{
+      <nuxt-link :to="localePath('/location')" class="nav-item">{{
         $t('whereToBuy')
       }}</nuxt-link>
-      <nuxt-link to="/buyNow" class="nav-item">{{ $t('buyNow') }}</nuxt-link>
+      <nuxt-link :to="localePath('/buyNow')" class="nav-item">{{
+        $t('buyNow')
+      }}</nuxt-link>
       <v-spacer></v-spacer>
       <LanguageSwitch />
       <div class="acc-blue">8 (800) 500-51-86</div>
@@ -31,35 +35,37 @@
     <div v-if="menuIsActive" class="overlay" @click="toggleMenu">
       <ul class="menu_popup" @click.stop>
         <li @click="toggleMenu">
-          <nuxt-link to="/" class="nav-item">{{ $t('stayswim') }}</nuxt-link>
+          <nuxt-link :to="localePath('/')" class="nav-item">{{
+            $t('stayswim')
+          }}</nuxt-link>
           <hr />
         </li>
         <li @click="toggleMenu">
-          <nuxt-link to="/certificates" class="nav-item">{{
+          <nuxt-link :to="localePath('/certificates')" class="nav-item">{{
             $t('certificates')
           }}</nuxt-link>
           <hr />
         </li>
         <li @click="toggleMenu">
-          <nuxt-link to="/#advantages" class="nav-item">
+          <nuxt-link :to="localePath('/#advantages')" class="nav-item">
             {{ $t('advantages') }}
           </nuxt-link>
           <hr />
         </li>
         <li @click="toggleMenu">
-          <nuxt-link to="/#instructions" class="nav-item">
+          <nuxt-link :to="localePath('/#instructions')" class="nav-item">
             {{ $t('instruction') }}
           </nuxt-link>
           <hr />
         </li>
         <li @click="toggleMenu">
-          <nuxt-link to="/location" class="nav-item">{{
+          <nuxt-link :to="localePath('/location')" class="nav-item">{{
             $t('whereToBuy')
           }}</nuxt-link>
           <hr />
         </li>
         <li @click="toggleMenu">
-          <nuxt-link to="/buyNow" class="nav-item">{{
+          <nuxt-link :to="localePath('/buyNow')" class="nav-item">{{
             $t('buyNow')
           }}</nuxt-link>
           <hr />

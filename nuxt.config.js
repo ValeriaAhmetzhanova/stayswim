@@ -139,6 +139,11 @@ export default {
           sendingOrder: 'Please wait, your order is sending...',
           sentOrder:
             'Your order was successfully sent! We will contact you soon.',
+          nameRequired: 'Name is required',
+          phoneRequired: 'Phone number is required',
+          phoneValid: 'Phone number must be valid',
+          questionRequired: 'Question is required',
+          nameChars: 'Name must be less than 30 characters',
         },
         ru: {
           stayswim: 'STAY SWIM',
@@ -217,6 +222,11 @@ export default {
           sendingOrder: 'Пожалуйста, подождите. Ваш заказ отправляется...',
           sentOrder:
             'Ваш заказ был успешно отправлен! Мы свяжемся с Вами в ближайшее время.',
+          nameRequired: 'Необходимо ввести имя',
+          phoneRequired: 'Необходимо ввести номер телефона',
+          phoneValid: 'Введите корректный номер телефона',
+          questionRequired: 'Необходимо задать вопрос',
+          nameChars: 'Имя должно содержать не больше 30 знаков',
         },
       },
     },

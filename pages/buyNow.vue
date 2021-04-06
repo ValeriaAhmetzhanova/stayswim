@@ -113,8 +113,8 @@ export default {
       type5Price: 2,
       number: '',
       phoneRules: [
-        (v) => !!v || 'Phone number  is required',
-        (v) => /^\d+$/.test(v) || 'Phone number must be valid',
+        (v) => !!v || this.$i18n.t('phoneRequired'),
+        (v) => /^\d+$/.test(v) || this.$i18n.t('phoneValid'),
       ],
     }
   },
