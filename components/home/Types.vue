@@ -15,7 +15,11 @@
         <div class="title">{{ $t('typesTitle2') }}</div>
         <div>{{ $t('typesText4') }}</div>
         <div>{{ $t('typesText3') }}</div>
-        <div><nuxt-link to="/buyNow" class="buy-btn">Buy</nuxt-link></div>
+        <div>
+          <nuxt-link :to="localePath('/buyNow')" class="buy-btn">
+            {{ $t('buy') }}</nuxt-link
+          >
+        </div>
       </div>
     </div>
   </div>
