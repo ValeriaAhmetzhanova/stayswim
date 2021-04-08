@@ -15,7 +15,7 @@
               <th>{{ $t('price') }}</th>
             </tr>
             <tr>
-              <td>15cm*30cm</td>
+              <td>10cm*30cm</td>
               <td>
                 <span class="sign minus" @click="handleMinus(1)">-</span>
                 {{ type1Quantity }}
@@ -24,7 +24,7 @@
               <td>$ {{ type1Price }}</td>
             </tr>
             <tr>
-              <td>15cm*20cm</td>
+              <td>10cm*20cm</td>
               <td>
                 <span class="sign minus" @click="handleMinus(2)">-</span>
                 {{ type2Quantity }}
@@ -33,7 +33,7 @@
               <td>$ {{ type2Price }}</td>
             </tr>
             <tr>
-              <td>10cm*30cm</td>
+              <td>10cm*15cm</td>
               <td>
                 <span class="sign minus" @click="handleMinus(3)">-</span>
                 {{ type3Quantity }}
@@ -42,22 +42,13 @@
               <td>$ {{ type3Price }}</td>
             </tr>
             <tr>
-              <td>10cm*15cm</td>
+              <td>5cm*7cm</td>
               <td>
                 <span class="sign minus" @click="handleMinus(4)">-</span>
                 {{ type4Quantity }}
                 <span class="sign plus" @click="handlePlus(4)">+</span>
               </td>
               <td>$ {{ type4Price }}</td>
-            </tr>
-            <tr>
-              <td>5cm*7cm</td>
-              <td>
-                <span class="sign minus" @click="handleMinus(5)">-</span>
-                {{ type5Quantity }}
-                <span class="sign plus" @click="handlePlus(5)">+</span>
-              </td>
-              <td>$ {{ type5Price }}</td>
             </tr>
           </table>
           <v-form ref="number" v-model="valid" lazy-validation>
@@ -100,17 +91,15 @@ export default {
   data() {
     return {
       valid: true,
-      types: 5,
+      types: 4,
       type1Quantity: 0,
       type2Quantity: 0,
       type3Quantity: 0,
       type4Quantity: 0,
-      type5Quantity: 0,
-      type1Price: 10,
-      type2Price: 8,
-      type3Price: 6,
-      type4Price: 4,
-      type5Price: 2,
+      type1Price: 7,
+      type2Price: 5,
+      type3Price: 4,
+      type4Price: 2.5,
       number: '',
       phoneRules: [
         (v) => !!v || this.$i18n.t('phoneRequired'),
@@ -129,7 +118,7 @@ export default {
       return result
     },
     message() {
-      return `The client's phone number: ${this.number}. \n 15cm*30cm items: ${this.type1Quantity}. \n 15cm*20cm items: ${this.type2Quantity}. \n 10cm*30cm items: ${this.type3Quantity}. \n 10cm*15cm items: ${this.type4Quantity}. \n 5cm*7cm items: ${this.type5Quantity}. \n Total order price: ${this.total}.`
+      return `The client's phone number: ${this.number}. \n 10cm*30cm items: ${this.type1Quantity}. \n 10cm*20cm items: ${this.type2Quantity}. \n 10cm*15cm items: ${this.type3Quantity}. \n 5cm*7cm items: ${this.type4Quantity}. \n Total order price: ${this.total}.`
     },
   },
   methods: {
