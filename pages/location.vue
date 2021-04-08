@@ -5,12 +5,12 @@
       <div class="location">
         <Map class="location-item" />
         <div class="location-item text">
-          <div class="number">8 (800) 500-51-86</div>
+          <div class="number">+62 813 3703 3645</div>
           <div class="address">
             Jl. Raya Uluwatu, Ungasan, Kec. Kuta Sel., Kabupaten Badung, Bali
             80361
           </div>
-          <div class="email">stayswim@mail.ru</div>
+          <div class="email">6695959@gmail.com</div>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ export default {
     text-align: right;
     color: $grey-color;
     font-size: 1.4rem;
-    padding-left: 15%;
+    padding-left: 10%;
     @media (max-width: $sm) {
       text-align: center;
       padding-left: 0;

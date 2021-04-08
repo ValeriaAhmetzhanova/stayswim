@@ -25,7 +25,7 @@
       }}</nuxt-link>
       <v-spacer></v-spacer>
       <LanguageSwitch />
-      <div class="acc-blue">8 (800) 500-51-86</div>
+      <div class="acc-blue">+62 813 3703 3645</div>
     </v-app-bar>
     <v-app-bar class="header-mobile" color="transparent" flat>
       <v-app-bar-nav-icon @click="toggleMenu"></v-app-bar-nav-icon>

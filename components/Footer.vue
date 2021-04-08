@@ -14,8 +14,8 @@
     </div>
     <v-spacer></v-spacer>
     <div class="text-right">
-      <div class="footer-item">8 (800) 500-51-86</div>
-      <div class="footer-text">stayswim@mail.ru</div>
+      <div class="footer-item">+62 813 3703 3645</div>
+      <div class="footer-text">6695959@gmail.com</div>
     </div>
     <v-spacer></v-spacer>
   </v-bottom-navigation>
