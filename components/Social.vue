@@ -17,8 +17,7 @@ export default {
   top: 50%;
   z-index: 10;
   @media (max-width: $sm) {
-    right: 10%;
-    top: 2%;
+    top: 2.5%;
     text-align: center;
   }
   img {
